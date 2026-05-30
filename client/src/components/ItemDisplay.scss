@@ -12,7 +12,15 @@
     }
 
     &.completed {
-        text-decoration: line-through;
+        opacity: 0.72;
+
+        .name input {
+            text-decoration: line-through;
+        }
+    }
+
+    &.overdue {
+        border-left: 4px solid #b42318;
     }
 }
 
@@ -21,7 +29,60 @@
 }
 
 .name {
-    padding-top: 3px;
+    padding-top: 0;
+}
+
+.metadata {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+    min-height: 22px;
+}
+
+.priority,
+.due-date {
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.priority-high {
+    background-color: #b42318;
+}
+
+.priority-medium {
+    background-color: #8a5a00;
+}
+
+.priority-low {
+    background-color: #12633d;
+}
+
+.due-date {
+    background-color: #4b5563;
+}
+
+.due-date-overdue {
+    background-color: #7f1d1d;
+}
+
+.item-error {
+    color: #b42318;
+    font-size: 0.875rem;
+    margin-top: 6px;
+}
+
+.priority-select {
+    max-width: 130px;
+}
+
+.due-date-input {
+    max-width: 160px;
+}
+
+.save-item {
+    margin-right: 6px;
 }
 
 .remove {

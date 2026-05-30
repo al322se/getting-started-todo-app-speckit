@@ -11,7 +11,9 @@ be well-documented to ensure anyone can come in and easily learn.
 
 
 This sample application is a simple React frontend that receives data from a
-Node.js backend. 
+Node.js backend. Todo items can include optional priority and due date fields,
+which are displayed in the list and used to keep urgent incomplete work near
+the top.
 
 When the application is packaged and shipped, the frontend is compiled into
 static HTML, CSS, and JS and then bundled with the backend where it is then

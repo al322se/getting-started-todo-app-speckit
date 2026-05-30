@@ -44,6 +44,14 @@ Manual story checks at `http://localhost`:
 5. Mark the overdue task complete. Confirm it remains completed and no longer appears as overdue.
 6. Create several incomplete tasks with overdue, earlier, later, and no due dates. Confirm overdue tasks appear first, then earliest due dates, then priority when due-date urgency matches.
 
+Manual sort cases for the primary list:
+
+- Incomplete overdue tasks appear before incomplete future-dated and undated tasks.
+- Two incomplete tasks with different due dates are ordered by the earlier date first.
+- Two incomplete tasks with the same due date are ordered high, then medium, then low priority.
+- Incomplete tasks without due dates stay after dated incomplete tasks unless completion status changes.
+- Completed tasks stay after incomplete tasks, including completed tasks with past due dates.
+
 ## Data Safety Check
 
 Before implementation testing, keep the existing `todo-mysql-data` volume. After the feature runs, previously created tasks must still be visible and editable.

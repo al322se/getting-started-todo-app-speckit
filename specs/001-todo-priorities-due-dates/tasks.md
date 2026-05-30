@@ -12,9 +12,9 @@
 
 **Purpose**: Confirm the existing project surface before feature work starts.
 
-- [ ] T001 Inspect current backend item route and persistence behavior in `backend/src/routes/addItem.js`, `backend/src/routes/updateItem.js`, `backend/src/routes/getItems.js`, `backend/src/persistence/mysql.js`, and `backend/src/persistence/sqlite.js`
-- [ ] T002 Inspect current todo form and item rendering behavior in `client/src/components/AddNewItemForm.jsx`, `client/src/components/ItemDisplay.jsx`, and `client/src/components/TodoListCard.jsx`
-- [ ] T003 [P] Review the API contract in `specs/001-todo-priorities-due-dates/contracts/items-api.md` against existing route tests in `backend/spec/routes/addItem.spec.js`, `backend/spec/routes/updateItem.spec.js`, and `backend/spec/routes/getItems.spec.js`
+- [X] T001 Inspect current backend item route and persistence behavior in `backend/src/routes/addItem.js`, `backend/src/routes/updateItem.js`, `backend/src/routes/getItems.js`, `backend/src/persistence/mysql.js`, and `backend/src/persistence/sqlite.js`
+- [X] T002 Inspect current todo form and item rendering behavior in `client/src/components/AddNewItemForm.jsx`, `client/src/components/ItemDisplay.jsx`, and `client/src/components/TodoListCard.jsx`
+- [X] T003 [P] Review the API contract in `specs/001-todo-priorities-due-dates/contracts/items-api.md` against existing route tests in `backend/spec/routes/addItem.spec.js`, `backend/spec/routes/updateItem.spec.js`, and `backend/spec/routes/getItems.spec.js`
 
 ---
 
@@ -24,13 +24,13 @@
 
 **CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T004 Create shared item validation helpers for `priority` and `dueDate` in `backend/src/routes/itemValidation.js`
-- [ ] T005 [P] Add Jest coverage for valid and invalid priority/date validation in `backend/spec/routes/itemValidation.spec.js`
-- [ ] T006 Add nullable `priority` and `dueDate` schema migration/backfill logic for MySQL in `backend/src/persistence/mysql.js`
-- [ ] T007 Add nullable `priority` and `dueDate` schema migration/backfill logic for SQLite in `backend/src/persistence/sqlite.js`
-- [ ] T008 Update MySQL `getItems`, `getItem`, `storeItem`, and `updateItem` data mapping for `priority` and `dueDate` in `backend/src/persistence/mysql.js`
-- [ ] T009 Update SQLite `getItems`, `getItem`, `storeItem`, and `updateItem` data mapping for `priority` and `dueDate` in `backend/src/persistence/sqlite.js`
-- [ ] T010 [P] Add SQLite persistence Jest coverage for storing, updating, clearing, and reading `priority` and `dueDate` in `backend/spec/persistence/sqlite.spec.js`
+- [X] T004 Create shared item validation helpers for `priority` and `dueDate` in `backend/src/routes/itemValidation.js`
+- [X] T005 [P] Add Jest coverage for valid and invalid priority/date validation in `backend/spec/routes/itemValidation.spec.js`
+- [X] T006 Add nullable `priority` and `dueDate` schema migration/backfill logic for MySQL in `backend/src/persistence/mysql.js`
+- [X] T007 Add nullable `priority` and `dueDate` schema migration/backfill logic for SQLite in `backend/src/persistence/sqlite.js`
+- [X] T008 Update MySQL `getItems`, `getItem`, `storeItem`, and `updateItem` data mapping for `priority` and `dueDate` in `backend/src/persistence/mysql.js`
+- [X] T009 Update SQLite `getItems`, `getItem`, `storeItem`, and `updateItem` data mapping for `priority` and `dueDate` in `backend/src/persistence/sqlite.js`
+- [X] T010 [P] Add SQLite persistence Jest coverage for storing, updating, clearing, and reading `priority` and `dueDate` in `backend/spec/persistence/sqlite.spec.js`
 
 **Checkpoint**: Foundation ready - all task records can safely carry optional planning fields.
 
@@ -44,21 +44,21 @@
 
 ### Tests for User Story 1
 
-- [ ] T011 [P] [US1] Add create-route Jest tests for accepted `priority` and `dueDate` values in `backend/spec/routes/addItem.spec.js`
-- [ ] T012 [P] [US1] Add create-route Jest tests for rejected invalid `priority` and invalid `dueDate` values in `backend/spec/routes/addItem.spec.js`
-- [ ] T013 [P] [US1] Add update-route Jest tests for adding, changing, and clearing `priority` and `dueDate` in `backend/spec/routes/updateItem.spec.js`
-- [ ] T014 [P] [US1] Add update-route Jest tests for rejected invalid `priority` and invalid `dueDate` values in `backend/spec/routes/updateItem.spec.js`
+- [X] T011 [P] [US1] Add create-route Jest tests for accepted `priority` and `dueDate` values in `backend/spec/routes/addItem.spec.js`
+- [X] T012 [P] [US1] Add create-route Jest tests for rejected invalid `priority` and invalid `dueDate` values in `backend/spec/routes/addItem.spec.js`
+- [X] T013 [P] [US1] Add update-route Jest tests for adding, changing, and clearing `priority` and `dueDate` in `backend/spec/routes/updateItem.spec.js`
+- [X] T014 [P] [US1] Add update-route Jest tests for rejected invalid `priority` and invalid `dueDate` values in `backend/spec/routes/updateItem.spec.js`
 
 ### Implementation for User Story 1
 
-- [ ] T015 [US1] Update item creation to validate and persist optional `priority` and `dueDate` in `backend/src/routes/addItem.js`
-- [ ] T016 [US1] Update item editing to validate, persist, and clear optional `priority` and `dueDate` in `backend/src/routes/updateItem.js`
-- [ ] T017 [US1] Add priority and due date controls to the create form request flow in `client/src/components/AddNewItemForm.jsx`
-- [ ] T018 [US1] Add inline edit controls for task name, priority, and due date in `client/src/components/ItemDisplay.jsx`
-- [ ] T019 [US1] Preserve priority and due date when toggling completion in `client/src/components/ItemDisplay.jsx`
-- [ ] T020 [US1] Render priority and due date details for each task in `client/src/components/ItemDisplay.jsx`
-- [ ] T021 [US1] Add styling for editable planning fields and task metadata in `client/src/components/ItemDisplay.scss`
-- [ ] T022 [US1] Run the User Story 1 manual verification steps from `specs/001-todo-priorities-due-dates/quickstart.md`
+- [X] T015 [US1] Update item creation to validate and persist optional `priority` and `dueDate` in `backend/src/routes/addItem.js`
+- [X] T016 [US1] Update item editing to validate, persist, and clear optional `priority` and `dueDate` in `backend/src/routes/updateItem.js`
+- [X] T017 [US1] Add priority and due date controls to the create form request flow in `client/src/components/AddNewItemForm.jsx`
+- [X] T018 [US1] Add inline edit controls for task name, priority, and due date in `client/src/components/ItemDisplay.jsx`
+- [X] T019 [US1] Preserve priority and due date when toggling completion in `client/src/components/ItemDisplay.jsx`
+- [X] T020 [US1] Render priority and due date details for each task in `client/src/components/ItemDisplay.jsx`
+- [X] T021 [US1] Add styling for editable planning fields and task metadata in `client/src/components/ItemDisplay.scss`
+- [X] T022 [US1] Run the User Story 1 manual verification steps from `specs/001-todo-priorities-due-dates/quickstart.md`
 
 **Checkpoint**: User Story 1 is fully functional and independently testable.
 
@@ -72,15 +72,15 @@
 
 ### Tests for User Story 2
 
-- [ ] T023 [P] [US2] Add route or validation Jest coverage confirming completed past-due tasks remain valid and are returned with their due date in `backend/spec/routes/updateItem.spec.js`
+- [X] T023 [P] [US2] Add route or validation Jest coverage confirming completed past-due tasks remain valid and are returned with their due date in `backend/spec/routes/updateItem.spec.js`
 
 ### Implementation for User Story 2
 
-- [ ] T024 [P] [US2] Add client date and priority display helpers for effective priority and overdue detection in `client/src/components/itemPlanning.js`
-- [ ] T025 [US2] Apply visually distinct priority badges and due date labels in `client/src/components/ItemDisplay.jsx`
-- [ ] T026 [US2] Apply overdue labeling only to incomplete past-due tasks in `client/src/components/ItemDisplay.jsx`
-- [ ] T027 [US2] Add priority, due date, and overdue visual styles in `client/src/components/ItemDisplay.scss`
-- [ ] T028 [US2] Run the User Story 2 manual verification steps from `specs/001-todo-priorities-due-dates/quickstart.md`
+- [X] T024 [P] [US2] Add client date and priority display helpers for effective priority and overdue detection in `client/src/components/itemPlanning.js`
+- [X] T025 [US2] Apply visually distinct priority badges and due date labels in `client/src/components/ItemDisplay.jsx`
+- [X] T026 [US2] Apply overdue labeling only to incomplete past-due tasks in `client/src/components/ItemDisplay.jsx`
+- [X] T027 [US2] Add priority, due date, and overdue visual styles in `client/src/components/ItemDisplay.scss`
+- [X] T028 [US2] Run the User Story 2 manual verification steps from `specs/001-todo-priorities-due-dates/quickstart.md`
 
 **Checkpoint**: User Stories 1 and 2 both work independently.
 
@@ -94,14 +94,14 @@
 
 ### Tests for User Story 3
 
-- [ ] T029 [P] [US3] Add client planning sort helper tests or documented manual sort cases in `specs/001-todo-priorities-due-dates/quickstart.md`
+- [X] T029 [P] [US3] Add client planning sort helper tests or documented manual sort cases in `specs/001-todo-priorities-due-dates/quickstart.md`
 
 ### Implementation for User Story 3
 
-- [ ] T030 [P] [US3] Add stable task ordering helper for completion, overdue status, due date, and priority in `client/src/components/itemPlanning.js`
-- [ ] T031 [US3] Apply task ordering before rendering items in `client/src/components/TodoListCard.jsx`
-- [ ] T032 [US3] Ensure new and updated items are re-sorted after create, update, and completion toggle in `client/src/components/TodoListCard.jsx`
-- [ ] T033 [US3] Run the User Story 3 manual verification steps from `specs/001-todo-priorities-due-dates/quickstart.md`
+- [X] T030 [P] [US3] Add stable task ordering helper for completion, overdue status, due date, and priority in `client/src/components/itemPlanning.js`
+- [X] T031 [US3] Apply task ordering before rendering items in `client/src/components/TodoListCard.jsx`
+- [X] T032 [US3] Ensure new and updated items are re-sorted after create, update, and completion toggle in `client/src/components/TodoListCard.jsx`
+- [X] T033 [US3] Run the User Story 3 manual verification steps from `specs/001-todo-priorities-due-dates/quickstart.md`
 
 **Checkpoint**: All user stories are independently functional.
 
@@ -111,12 +111,12 @@
 
 **Purpose**: Validate the full feature and update user-facing guidance.
 
-- [ ] T034 [P] Update observable field and behavior documentation in `README.md` if setup, runtime, or user-visible behavior guidance changes
-- [ ] T035 [P] Confirm the API contract still matches implementation details in `specs/001-todo-priorities-due-dates/contracts/items-api.md`
-- [ ] T036 Run backend Jest tests with `npm test` from `backend/`
-- [ ] T037 Run client lint with `npm run lint` from `client/`
-- [ ] T038 Run client build with `npm run build` from `client/`
-- [ ] T039 Run full manual verification from `specs/001-todo-priorities-due-dates/quickstart.md` using `docker compose up --watch`
+- [X] T034 [P] Update observable field and behavior documentation in `README.md` if setup, runtime, or user-visible behavior guidance changes
+- [X] T035 [P] Confirm the API contract still matches implementation details in `specs/001-todo-priorities-due-dates/contracts/items-api.md`
+- [X] T036 Run backend Jest tests with `npm test` from `backend/`
+- [X] T037 Run client lint with `npm run lint` from `client/`
+- [X] T038 Run client build with `npm run build` from `client/`
+- [X] T039 Run full manual verification from `specs/001-todo-priorities-due-dates/quickstart.md` using `docker compose up --watch`
 
 ---
 

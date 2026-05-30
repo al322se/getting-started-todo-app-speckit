@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { AddItemForm } from './AddNewItemForm';
 import { ItemDisplay } from './ItemDisplay';
+import { sortItemsByPlanning } from './itemPlanning';
 
 export function TodoListCard() {
     const [items, setItems] = useState(null);
@@ -46,7 +47,7 @@ export function TodoListCard() {
             {items.length === 0 && (
                 <p className="text-center">No items yet! Add one above!</p>
             )}
-            {items.map((item) => (
+            {sortItemsByPlanning(items).map((item) => (
                 <ItemDisplay
                     key={item.id}
                     item={item}
