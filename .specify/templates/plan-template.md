@@ -40,7 +40,19 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Container workflow**: Plan preserves `docker compose up --watch` as the
+  full-stack development path and identifies any Compose, Dockerfile, port, or
+  service changes.
+- **Client/API boundary**: Plan identifies affected `/api` contracts, JSON
+  response shapes, and where client versus backend responsibilities live.
+- **Story verification**: Each user story has an independent test path; backend
+  behavior changes include Jest coverage, while client-only work includes
+  automated coverage or documented manual verification.
+- **Data persistence safety**: Plan documents schema, migration, seed, or
+  volume impact for todo data and avoids non-local hard-coded secrets.
+- **Documentation impact**: Plan identifies README, quickstart, or feature docs
+  that must change when setup, ports, services, environment, tests, or
+  troubleshooting change.
 
 ## Project Structure
 
